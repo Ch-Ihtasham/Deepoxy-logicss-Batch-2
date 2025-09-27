@@ -1,0 +1,16 @@
+three types of css we have
+1.inline css
+<h2 style='you will write css in this area'>heading two</h2>
+2.internal css
+
+you will use the style tag in you head tag
+
+<head>
+<style>
+css will be written here in this section 
+</style>
+</head>
+
+3.external css
+ you will create a css file and write css properties there
+
