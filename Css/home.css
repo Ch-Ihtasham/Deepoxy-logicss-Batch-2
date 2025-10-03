@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+.header{
+    height: 100vh;
+    background-image: url(../assets/img2.png);
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    position: sticky;
+    top: 0px;
+}
+.nav-links{
+    display: flex;
+    gap: 30px;
+}
+.nav-links li{
+    list-style: none;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+button{
+    background-color: orangered;
+    border-radius: 10px;
+    padding: 3px 6px;
+    border: none;
+
+}
