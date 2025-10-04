@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            border: 2px solid white;
+            display: flow-root;
+        }
+
+        #box2 {
+            float: right;
+            clear: both;
+        }
+
+        .hv {
+            background-color: aqua;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .hv:hover {
+            background-color: blue;
+        }
+
+        /* a:active{
+            background-color: blueviolet;
+        } */
+        /* input:focus{
+            border: 3px solid black;
+            outline: none;
+            background-color: brown;
+         } */
+        #chk:checked+label {
+            /* background-color: yellow; */
+            outline: 2px solid yellow;
+        }
+
+        .box:first-child {
+            background-color: antiquewhite;
+
+        }
+
+        .box:last-child {
+            background-color: brown;
+        }
+
+        .box:nth-child(2) {
+            background-color: cadetblue;
+        }
+
+        #para::selection {
+            background-color: aqua;
+        }
+
+        #para::after {
+            content: '<button>hello</button>';
+            background-color: bisque;
+        }
+
+        .boc {
+            height: 100px;
+            width: 100px;
+            background-color: blanchedalmond;
+            border: 2px solid black;
+
+        }
+
+        .part {
+            /* display: flex; */
+            /* flex-wrap:wrap; */
+            /* justify-content: center;
+            gap: 10px; */
+            display: grid;
+            grid-template-columns: 100px 100px;
+            background-color: brown;
+            justify-content: center;
+            align-content: center;
+
+
+        }
+
+        .boc:last-child {
+            /* flex-grow: 2; */
+            /* flex-basis: 200px;
+            flex-shrink: 2; */
+        }
+
+        #boc9 {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            /* text-align: center; */
+
+        }
+
+        .bov {
+            height: 200px;
+            /* font-weight: 100px; */
+            width: 100px;
+            background-color: bisque;
+            /* transition: all 1s ease-in-out; */
+            /* transform: translateX(100px); */
+            /* transform: rotate(45deg); */
+        }
+
+        #box10 {
+            display: none;
+            height: 80px;
+            background-color: aqua;
+        }
+
+        .bov:hover #box10 {
+            display: block;
+        }
+
+        #anmi {
+            height: 100px;
+            width: 100px;
+            background-color: aqua;
+            /* transform: translateX(300px); */
+            animation: slideIn 2s ease-in-out 0.2s infinite;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(0px);
+                /* opacity: 0; */
+            }
+
+            to {
+                transform: translateX(300px);
+                /* opacity: 1; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="anmi">
+
+    </div>
+
+    <div class="container">
+        <div class="box" id="box1">box 1</div>
+        <div class="box" id="box2">box 2</div>
+        <div class="box" id="box3">box 3</div>
+    </div>
+    <div id="para">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, illo vitae natus ducimus molestias
+        exercitationem modi ut repellendus molestiae optio dolorum cum quisquam aut omnis! Quisquam qui architecto quo
+        repellendus?
+    </div>
+    <div class="hv">
+        hello world
+    </div>
+    <a href="">google</a>
+    <input type="text" placeholder="enter your name">
+    <input type="checkbox" id="chk">
+    <label for="">abc</label>
+    <div>
+
+    </div>
+    <div class="part">
+        <div class="boc">box1</div>
+        <div class="boc">2</div>
+        <div class="boc">3</div>
+        <div class="boc">4</div>
+        <div class="boc">5</div>
+        <div class="boc">6</div>
+        <div class="boc">7</div>
+        <div class="boc">8</div>
+        <div class="boc" id="boc9">9</div>
+
+    </div>
+    <!-- <div class="bov">
+        box 1
+        <div id="box10">
+            box 2
+        </div>
+    </div> -->
+
+
+</body>
+
+</html>
