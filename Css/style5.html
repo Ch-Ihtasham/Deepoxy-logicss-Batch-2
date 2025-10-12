@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --bg: blue;
+            --x: 20px;
+        }
+
+        #abc {
+            height: 100px;
+            width: 100px;
+            background-color: var(--bg);
+            font-size: var(--x);
+            /* transition: all 1s ease-in-out; */
+            /* position: absolute;
+            left: 100px; */
+
+            /* transform: translateX(100px); */
+            /* transform: translateY(200px); */
+            /* transform: rotate(180deg);
+            transform: scale(5); */
+            animation: slideIn 1s ease-in-out 0s infinite;
+        }
+
+        /* #abc:hover{
+            transform: translateX(150px);
+            background-color: blue;
+            transform: rotate(90deg);
+        } */
+
+        #x:hover {
+            z-index: 20;
+        }
+
+        /* @keyframes slideIn {
+            from {
+                transform: translateX(0%);
+             opacity: 0; 
+            }
+
+            to {
+                transform: translateX(300%);
+                 opacity: 1; 
+            }
+        }  */
+
+        .box {
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+        }
+
+        .parent {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .prt {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bos {
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+
+        }
+
+
+        @media (max-width:769px) {
+            .parent {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+
+        @media(min-width:480px) {
+            .prt {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div style="display: flex; justify-content: space-between; align-items: center;">
+        <div style=" margin-left: 20px; display: flex;justify-content:center; align-items: center; position: relative;">
+            <div style="position: absolute; top: 0px; z-index: 2;background-color: blue;">icon</div>
+            <div style="border-left: 1px solid black;height: 100px;  display: inline-block;"></div>
+
+        </div>
+        <div>
+            this is my content
+        </div>
+    </div> -->
+    <!-- <div id="abc">
+        this is data
+    </div>
+    <div style="position: relative;">
+        <div style="height: 50px; width: 100px; background-color: bisque;position: absolute; z-index: 2;"></div>
+        <div style="height: 100px; width: 100px; background-color: rgb(52, 35, 13);  position: absolute; top: 0%;"
+            id="x"></div>
+    </div>
+    <div>
+
+    </div> -->
+    <div class="parent">
+        <div class="box">hi there</div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="prt">
+        <div class="bos"></div>
+        <div class="bos"></div>
+        <div class="bos"></div>
+    </div>
+
+</body>
+
+</html>
