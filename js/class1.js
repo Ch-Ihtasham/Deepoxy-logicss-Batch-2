@@ -9,16 +9,19 @@ console.log('hello world')
 // const no3 = 3;
 // console.log(no1, no2, no3)
 
-{
-    var no1 = 1;
-    let no2 = 2;
-    const no3 = 3;
-    console.log('these values belong to the scope bracket', no1, no2, no3)
-}
-const no3 = 3;
-var no1 = 3;
-var no1 = 30;
-let no2 = 6
-no2 = 61
+// {
+//     var no1 = 1;
+//     let no2 = 2;
+//     const no3 = 3;
+//     console.log('these values belong to the scope bracket', no1, no2, no3)
+// }
+// const no3 = 3;
+// var no1 = 3;
+// var no1 = 30;
+// let no2 = 6
+// no2 = 61
 
-console.log(no1, no2, no3)
+// console.log(no1, no2, no3)
+
+// let name = prompt('enter your name')
+// document.querySelector('#name').innerHTML = name
