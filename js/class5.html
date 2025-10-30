@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: aquamarine;
+
+        }
+
+        .navbar li {
+            list-style: none;
+        }
+
+        .navlinks {
+            display: flex;
+            justify-content: space-around;
+            /* background-color: azure; */
+            width: 100%;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .close {
+            display: none;
+        }
+
+        @media(max-width:440px) {
+            .menu {
+                display: block;
+            }
+
+            .navlinks {
+                position: fixed;
+                background-color: antiquewhite;
+                flex-direction: column;
+                height: 100vh;
+                width: 200px;
+                top: 0%;
+                transform: translateX(200%);
+                transition: 0.8s all ease-in-out;
+                /* left: 100%; */
+                /* padding-left: 40px; */
+
+            }
+
+            .close {
+                display: block;
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="x">
+        <div>hello world</div>
+    </div>
+    <div class="x">
+        <div>hello world</div>
+    </div>
+    <div class="x">
+        <div>hello world</div>
+    </div> -->
+    <nav class="navbar">
+        <ul class="navlinks">
+            <div class="close">X</div>
+            <li>Home</li>
+            <li>About</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+        <div class="menu">menu</div>
+    </nav>
+
+    <script>
+        // const x = document.querySelector('.x')
+        // document.getElementsByClassName('x')
+        // document.getElementById('x')
+        // document.getElementsByTagName('div')
+        // x.style.backgroundColor = 'red'
+        // let array = [1, 'ali', '10', 4, 5]
+        // array.forEach((v, i, a) => {
+        //     return v
+        //     console.log(a)
+        // })
+        // console.log(c)
+        // const qr = document.querySelectorAll(".x")
+        // qr.forEach((v, i) => {
+        //     v.style.backgroundColor = 'red'
+        // })
+        // console.log(qr)
+        // const htmlCollect = Array.from(document.getElementsByClassName('x'))
+        // htmlCollect.forEach((v, i) => {
+        //     v.style.backgroundColor = 'red'
+        // })
+        // console.log(htmlCollect)
+        const menu = document.querySelector('.menu')
+        const navlinks = document.querySelector('.navlinks')
+        const close = document.querySelector('.close')
+        console.log(close)
+        // console.log(menu)
+        menu.addEventListener('click', () => {
+            // alert('hello world')
+            navlinks.style.transform = 'translateX(75%)'
+        })
+        close.addEventListener('click', () => {
+            navlinks.style.transform = 'translateX(200%)'
+        })
+        menu.innerHTML='menu box'
+    </script>
+
+</body>
+
+</html>
