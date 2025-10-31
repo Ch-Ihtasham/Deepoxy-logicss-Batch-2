@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent" id="parent">
+        <div>child 1</div>
+        <div>child 2</div>
+    </div>
+    <div class="parent" id="par">
+        <div>child 1</div>
+        <div>child 2</div>
+    </div>
+    <div class="parent" id="par">
+        <div>child 1</div>
+        <div>child 2</div>
+    </div>
+    <div class="parent" id="par">
+        <div>child 1</div>
+        <div>child 2</div>
+    </div>
+    <div class="parent" id="par">
+        <div>child 1</div>
+        <div>child 2</div>
+    </div>
+    <div class="parent" id="par">
+        <div>child 1</div>
+        <div>child 2</div>
+    </div>
+    <div class="parent" id="par">
+        <div>child 1</div>
+        <div>child 2</div>
+    </div>
+    <div class="parent" id="par">
+        <div>child 1</div>
+        <div>child 2</div>
+    </div>
+    <div class="parent" id="par">
+        <div>child 1</div>
+        <div>child 2</div>
+    </div>
+    <div id="a" class=""><b>hi my name is Muhammad Ali</b></div>
+    <div id="b"></div>
+    <input type="text" name="" id="name" disabled>
+    <button id="click">click me</button>
+    <script>
+        // document.getElementById('parent')
+        // document.getElementsByClassName('parent')
+        const parent = Array.from(document.getElementsByClassName('parent'))
+        // console.log(parent.parentNode)
+        // console.log(parent.childNodes)
+        // console.log(parent.firstElementChild)
+        // console.log(parent.nextElementSibling)
+        console.log(document.getElementsByClassName('parent'))
+        console.log(document.querySelectorAll('.parent'))
+
+        // parent[0].style.backgroundColor = 'red'
+        // parent[1].style.backgroundColor = 'red'
+        parent.forEach((v, i, a) => {
+            v.style.backgroundColor = 'red'
+        })
+        const info = document.querySelector('#a')
+        // console.log(info.innerHTML)
+        // console.log(info.textContent)
+        // console.log(info.hasAttribute('class'))
+        console.log(info.attributes)
+        document.querySelector('#b').innerText = '<i>Hi there</i>'
+        // info.setAttribute('class', 'active')
+        info.classList.remove('active')
+        document.getElementById('name').removeAttribute('disabled')
+        const clickbtn = document.getElementById('click')
+        clickbtn.addEventListener('click', () => {
+            // alert('hello world')
+            // info.classList.toggle('active')
+            if (info.getAttribute('class') !== 'active') {
+                info.setAttribute('class', 'active')
+            } else {
+                info.removeAttribute('class', 'active')
+            }
+
+
+        })
+
+
+    </script>
+</body>
+
+</html>
