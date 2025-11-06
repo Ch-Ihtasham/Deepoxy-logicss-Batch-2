@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="details"></div>
+    <ul id="ul">
+        <li id="li1">this is our first li</li>
+    </ul>
+    <button id="addBtn">add</button>
+    <button id="remove">remove</button>
+    <button onclick="abc()">abc</button>
+    <!-- <input type="text" onkeydown="xyz()"> -->
+    <form action="" id="form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="username"> <br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <button type="submit" id="submitBtn">Submit</button>
+        <!-- <input type="submit" value=""> -->
+    </form>
+    <script>
+        let ul = document.getElementById('ul')
+        let li = document.createElement('li')
+        let li1 = document.querySelector('#li1')
+        li.textContent = 'Hi there this is our first li element'
+        // ul.appendChild(li)
+        // ul.append(li)
+        let addBtn = document.querySelector('#addBtn')
+        addBtn.addEventListener('keydown', () => {
+            ul.append(li)
+        })
+        document.querySelector('#remove').addEventListener('click', () => {
+            ul.removeChild(li1)
+        })
+        function abc() {
+            alert('hello world')
+        }
+        function xyz() {
+            // alert('this is xyz')
+            console.log(event.key)
+            if (event.key === 'Enter') {
+                alert('hello')
+            }
+        }
+        // let submitBtn = document.getElementById('submitBtn')
+        // submitBtn.addEventListener('')
+        let un = document.getElementById('name')
+        let email = document.getElementById('email')
+        let form = document.getElementById('form')
+        let details = document.querySelector('#details')
+        un.value = 'alajosidha'
+        form.addEventListener('submit', (e) => {
+
+            e.preventDefault()
+
+
+            console.log(un.value)
+            details.append(un.value)
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>
