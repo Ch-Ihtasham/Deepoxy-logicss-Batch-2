@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+</head>
+
+
+<body>
+    <div>
+        <input type="text" placeholder="enter your city name" id="city">
+        <button id="checkBtn">Check</button>
+        <div>City Name: <span id="cityName"></span></div>
+        <div id="temp"></div>
+        <div id="error"></div>
+    </div>
+
+    <script>
+
+        let apiKey = '5a5b9db67354136d5ab2c73981bb2ded'
+        let btn = document.querySelector('#checkBtn')
+        let temp = document.getElementById('temp')
+        let error = document.getElementById('error')
+
+        btn.addEventListener('click', () => {
+            let city = document.querySelector('#city')
+            let cityName = document.getElementById('cityName')
+            if (!city.value.trim()) {
+                error.innerText = 'enter a city name'
+            }
+            else {
+
+
+                fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.value.trim()}&appid=${apiKey}&units=metric`)
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error('city not found')
+                        }
+                        else {
+                            return response.json()
+                        }
+                    })
+                    .then((data) => {
+                        console.log(data)
+                        temp.innerText = data.main.temp
+                        cityName.innerText = data.name
+
+                    })
+                    .catch((err) => {
+                        // console.log('error')
+                        error.innerText = 'enter a valid city'
+                        console.log('Error', err)
+                    })
+
+                city.value = ' '
+            }
+        })
+    </script>
+</body>
+
+</html>
