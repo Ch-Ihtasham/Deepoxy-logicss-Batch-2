@@ -1,0 +1,9 @@
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(175, 231, 231);
+}
+ul li {
+  list-style: none;
+}
