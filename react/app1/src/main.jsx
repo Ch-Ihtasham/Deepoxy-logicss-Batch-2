@@ -6,15 +6,17 @@ import Navbar from './components/Navbar.jsx'
 import Fotter from './components/Fotter.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
 
+  <div>
     <Navbar logo='D-Poxy' />
-    <App name='ali' clas='a' rollno=' 1' /> <br />
-    <App name='abubakar' /> <br />
-    <App name='ahmed' /> <br />
-    <App name='talha' />
-    <App />
-    <Fotter />
+    <App name='ali' /> <br />
+    {/* <App name='abubakar' /> <br /> */}
+    {/* <App name='ahmed' /> <br /> */}
+    {/* <App name='talha' /> */}
 
-  </StrictMode>,
+    <Fotter />
+  </div>
+
+  //  </StrictMode>, 
 )
