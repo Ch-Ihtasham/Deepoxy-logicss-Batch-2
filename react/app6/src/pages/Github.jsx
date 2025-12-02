@@ -24,9 +24,14 @@ export default function Github() {
                     <div>
                         <div>Name:{apiData.name}</div>
                         <div>Follwers:{apiData.followers}</div>
-                        <img src={apiData.avatar_url} alt="github pic"  />
+                        <img src={apiData.avatar_url} alt="github pic" />
                     </div>
             }
+            {/* {apiData && <div>
+                <div>Name:{apiData.name}</div>
+                <div>Follwers:{apiData.followers}</div>
+                <img src={apiData.avatar_url} alt="github pic" />
+            </div>} */}
         </div>
     )
 }
