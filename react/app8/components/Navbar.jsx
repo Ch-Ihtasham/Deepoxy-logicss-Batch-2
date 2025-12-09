@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-
+require('react')
 function Navbar() {
     console.log('render')
     return (

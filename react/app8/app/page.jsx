@@ -1,7 +1,7 @@
 // import Image from "next/image";
 "use client"
 import { useCallback, useMemo, useState } from "react";
-import Navbar from '../components/Navbar'
+import { Navbar } from '../components/Navbar'
 export default function Home() {
   const [count, setCount] = useState(0)
   // let array = 10_000_000
