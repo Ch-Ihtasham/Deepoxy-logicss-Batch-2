@@ -11,7 +11,7 @@ export default function Home() {
   let a = useCallback(() => {
     console.log('hello world', name)
   }, [name])
-  const btnColor = useRef()
+  const btnColor = useRef(null)
   // let array = 10_000_000
   // const nums = useMemo(() => {
   //   console.log('rendering')
