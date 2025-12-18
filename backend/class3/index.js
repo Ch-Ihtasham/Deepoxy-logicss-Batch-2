@@ -96,3 +96,6 @@ import fs, { mkdir } from 'fs'
 // console.log('✅ File "index.txt" created inside it');
 
 // process.exit(0);
+
+
+fs.rmSync('ab.txt', { recursive: true, force: true })
